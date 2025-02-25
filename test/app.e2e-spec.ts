@@ -21,4 +21,14 @@ describe('AppController (e2e)', () => {
       .expect(200)
       .expect('Hello World!');
   });
+
+  it('/hello (GET)', () => {
+    return request(app.getHttpServer()).get('/hello').expect(200).expect({
+      name: 'funny',
+    });
+  });
+
+  it('/user (GET)', () => {
+    return request(app.getHttpServer()).get('/user').expect(200);
+  });
 });

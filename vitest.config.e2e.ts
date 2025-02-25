@@ -7,14 +7,12 @@ export default defineConfig({
     globals: true,
     alias: {
       '@src': './src',
-      '@test': './test',
     },
     root: './',
   },
   resolve: {
     alias: {
       '@src': './src',
-      '@test': './test',
     },
   },
   plugins: [swc.vite()],
